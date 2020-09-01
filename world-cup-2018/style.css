@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@400;500&family=Merienda:wght@400;700&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+* {
+  border: 0px solid gold;
+}
+
+body {
+  background-image: url('https://i.imgur.com/dLjJPB3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Open Sans', sans-serif;
+  color: whitesmoke;
+}
+
+header h1 {
+  text-align: center;
+  font-family: 'Lemonada', cursive;
+  font-size: 3em;
+}
+
+h2 {
+  color: #1F3B73;
+  font-weight: normal;
+}
+
+.matchdays-table {
+  display: flex;
+  justify-content: center;
+
+}
+
+table {
+  text-align: center;
+  text-transform: uppercase;
+  width: 70%;
+  height: 75vh;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+td {
+  border-bottom: 1px solid #306F9E;
+}
+
+.left-column {
+  width: 25%;
+}
+
+.right-column {
+  width: 75%;
+}
+
+.button {
+  padding: 1em;
+  margin: 0 1.5em;
+  border-radius: 10px;
+  background-color: #306F9E;
+  color: whitesmoke;
+}
+
+@media (max-width: 1000px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1em;
+    font-weight: 700;
+  }
+
+  table {
+    width: 80%;
+  }
+
+  .button {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .left-column {
+    width: 50%;
+  }
+
+  .right-column {
+    width: 50%;
+  }
+}
