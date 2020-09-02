@@ -5,6 +5,8 @@
   border: 0px solid gold;
 }
 
+/* ------ MAIN CONTENT ------ */
+
 body {
   background-image: url('https://i.imgur.com/dLjJPB3.jpg');
   background-size: cover;
@@ -17,6 +19,7 @@ header h1 {
   text-align: center;
   font-family: 'Lemonada', cursive;
   font-size: 3em;
+  margin: 0;
 }
 
 h2 {
@@ -27,14 +30,13 @@ h2 {
 .matchdays-table {
   display: flex;
   justify-content: center;
-
 }
 
 table {
   text-align: center;
   text-transform: uppercase;
   width: 70%;
-  height: 75vh;
+  height: 82vh;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -52,11 +54,23 @@ td {
 
 .button {
   padding: 1em;
-  margin: 0 1.5em;
+  margin: 0.5em 1.5em;
   border-radius: 10px;
   background-color: #306F9E;
   color: whitesmoke;
 }
+
+/* ------ MODAL ------ */
+
+.modal {
+  display: none;
+}
+
+.modal-text {
+  white-space: pre-line;
+}
+
+/* ------ MEDIA QUERY ------ */
 
 @media (max-width: 1000px) {
   header h1 {
