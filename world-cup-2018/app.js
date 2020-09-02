@@ -17,7 +17,11 @@ $(() => {
   $('.button').on('click', (event) => {
     event.preventDefault();
 
+    // Variable for button date:
     const $buttonDate = $(event.target).attr('id')
+
+    // Variable for button text:
+    const $dateText = $(event.target).text();
 
     const link = `https://cors-anywhere.herokuapp.com/https://api.football-data.org/v2/competitions/WC/matches`
 
@@ -28,23 +32,25 @@ $(() => {
       type: "GET",
     }).done(datas => {
       const matches = datas.matches
-      let outputString = ""
+      let outputString = "\n\n" + `${$dateText}` + "\n"
 
       // For Of Loop iterates over all matches
       for (let match of matches) {
 
-        // Variables for team names:
+        console.log(match);
+
+        // Variables for team names
         const homeTeamName = match.homeTeam.name
         const awayTeamName = match.awayTeam.name
 
-        // Variables for scores:
+        // Variables for scores
         const homeTeamScore = match.score.fullTime.homeTeam
         const awayTeamScore = match.score.fullTime.awayTeam
 
         // Variable for stage (Group, Round of 16, Quarter-finals, etc):
         const matchStage = match.group
 
-        // Variable for date
+        // Variable for match date
         const matchDate = match.utcDate
 
         // Checks API dates against button IDs
@@ -55,7 +61,7 @@ $(() => {
         }
       }
 
-      // Invoke function:
+      // Invoke modal function:
       openModal(outputString)
 
     })
